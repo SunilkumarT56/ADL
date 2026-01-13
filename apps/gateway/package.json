@@ -3,7 +3,7 @@
   "module": "src/index.ts",
   "type": "module",
   "scripts": {
-    "dev": "bun run src/index.ts",
+    "dev": "bun run src/gateway.express.ts",
     "build": "bun build src/index.ts --outdir dist"
   },
   "private": true,
@@ -12,5 +12,12 @@
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "http-proxy-middleware": "^3.0.5"
   }
 }
