@@ -1,8 +1,12 @@
 {
-  "name": "auth",
+  "name": "@apps/auth",
   "module": "index.ts",
   "type": "module",
   "private": true,
+  "scripts": {
+    "dev": "bun run src/bootstrap.ts",
+    "build": "bun build src/bootstrap.ts --outdir dist"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
@@ -10,8 +14,10 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "@types/bcrypt": "^6.0.0",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
+    "bcrypt": "^6.0.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
