@@ -22,7 +22,7 @@ export class Server {
   private registerErrorHandler() {}
 
   public start() {
-    this.registerMiddlewares();
+   this.registerMiddlewares();
     this.registerRoutes();
     this.registerErrorHandler();
 

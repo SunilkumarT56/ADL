@@ -1,10 +1,10 @@
 {
   "name": "db",
-  "module": "index.ts",
+  "module": "prisma/index.ts",
   "type": "module",
   "private": true,
   "exports": {
-    "./client": "./index.ts"
+    "./client": "./prisma/index.ts"
   },
   "devDependencies": {
     "@types/bun": "latest"

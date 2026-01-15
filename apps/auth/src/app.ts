@@ -1,15 +1,22 @@
 import { Server } from './server';
+import dotenv from 'dotenv';
 import { AuthService } from './modules/auth/auth.service';
 import { AuthController } from './modules/auth/auth.controller';
 import { createAuthRoutes } from './modules/auth/auth.routes';
+import { RedisClient } from './config/redis';
+import { PrismaService } from 'db/client';
+
+dotenv.config();
 
 export class App {
   private readonly server: Server;
 
-  constructor() {
-    const port = Number(process.env.PORT) || 3000;
+  constructor(redis: RedisClient, prisma: PrismaService) {
+    const prismaClient = prisma.getClient();
+    const redisClient = redis.getClient();
+    const port = Number(process.env.AUTH_PORT) || Number(process.env.PORT) || 3002;
     this.server = new Server(port);
-    const authService = new AuthService();
+    const authService = new AuthService(prismaClient, redisClient);
     const authController = new AuthController(authService);
     const authRoutes = createAuthRoutes(authController);
 
