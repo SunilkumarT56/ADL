@@ -4,8 +4,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "bun run src/bootstrap.ts",
-    "build": "bun build src/bootstrap.ts --outdir dist"
+    "dev": "bun run bootstrap.ts",
+    "build": "bun build bootstrap.ts --outdir dist"
   },
   "devDependencies": {
     "@types/bun": "latest"

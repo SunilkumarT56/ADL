@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import { App } from './app';
-import { RedisClient } from './config/redis';
+import { RedisClient } from '@/config/redis';
 import { PrismaService } from 'db/client';
 
 async function bootstrap() {

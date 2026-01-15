@@ -1,9 +1,9 @@
 import { Server } from './server';
 import dotenv from 'dotenv';
-import { AuthService } from './modules/auth/auth.service';
-import { AuthController } from './modules/auth/auth.controller';
-import { createAuthRoutes } from './modules/auth/auth.routes';
-import { RedisClient } from './config/redis';
+import { AuthService } from '@/modules/auth/auth.service';
+import { AuthController } from '@/modules/auth/auth.controller';
+import { createAuthRoutes } from '@/modules/auth/auth.routes';
+import { RedisClient } from '@/config/redis';
 import { PrismaService } from 'db/client';
 
 dotenv.config();
