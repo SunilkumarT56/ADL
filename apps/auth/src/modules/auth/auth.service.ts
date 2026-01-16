@@ -1,9 +1,9 @@
-import { hashPassword , comparePassword } from '@/utils/password.util';
+import { hashPassword, comparePassword } from '@/utils/password.util';
 import { SUCCESS_CODES } from '@/modules/auth/auth.constants';
 import { AppError } from '@/errors/AppError';
 import type { PrismaClient } from 'db/client';
 import type { RedisClientType } from 'redis';
-import type { RegisterUser } from './auth.types';
+import type { RegisterUser } from '@/modules/auth/auth.types';
 import { UserRepository } from '@/repositories/user.repository';
 import { ERRORCODES } from '@/modules/auth/auth.constants';
 import { User } from '@/entities/user.entity';
