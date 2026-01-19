@@ -4,8 +4,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "bun run --watch src/index.ts",
-    "build": "bun build src/index.ts --outdir dist"
+    "dev": "bun run --watch cmd/server.ts",
+    "build": "bun build cmd/server.ts --outdir dist"
   },
   "devDependencies": {
     "@types/bun": "latest"
@@ -16,6 +16,7 @@
   "dependencies": {
     "@types/express": "^5.0.6",
     "@types/ws": "^8.18.1",
+    "crypto": "^1.0.1",
     "express": "^5.2.1",
     "ws": "^8.19.0"
   }
